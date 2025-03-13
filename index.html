@@ -18,96 +18,78 @@
         <link rel="manifest" href="/images/site.webmanifest">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="styles.css">
+
+        <script defer src="https://kit.fontawesome.com/bbf23d2d56.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="./js/project-chart.js"></script>
     </head>
     <body>
-        <header>
-            
-        </header>
         <aside class="sidebar">
             <nav>
-                <ul>
-                    <li><a href="#">Blank Page</a></li>
-                    <li><a href="#">Bootstrap</a></li>
-                    <li><a href="#">Components</a>
-                        <ul>
-                            <li><a href="#">Avatar</a></li>
-                            <li><a href="#">Toastify</a></li>
-                            <li><a href="#">Sweet Alert</a></li>
-                            <li><a href="#">Hero</a></li>
-                        </ul>
+                <ul class="options-wrapper">
+                    <article class="main-options">
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-briefcase icon"></i>
+                                <label>Projects</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-people-group icon"></i>
+                                <label>Teams</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-gear icon"></i>
+                                <label>Settings</label>
+                            </a>
+                        </li>
+                    </article>
+                    <li>
+                        <a>
+                            <i class="fa-solid fa-right-from-bracket icon"></i>
+                            <label>Logout</label>
+                        </a>
                     </li>
-                    <li><a href="#">Forms</a></li>
-                    <li><a href="#">Widgets</a></li>
-                    <li><a href="#">Charts</a></li>
-                    <li><a href="#">Icons</a></li>
-                    <li><a href="#">Auth</a></li>
-                    <li><a href="#">Errors</a></li>
-                    <li><a href="#">Credits</a></li>
                 </ul>
             </nav>
         </aside>
         <main class="content">
-            <header class="top-bar">
-                <div class="notifications">
-                    <span class="badge">4</span>
-                    <img src="notification-icon.png" alt="Notifications">
-                </div>
-                <div class="user-profile">
-                    <img src="profile-icon.png" alt="User Profile">
-                </div>
+            <header>
+                <header class="top-bar">
+                    <article class="notifications">
+                        <i class="fa-solid fa-bell notification-icon">
+                            <span class="badge">4</span>
+                        </i>
+                    </article>
+                    <article class="user-profile">
+                        <i class="fa-solid fa-user user-icon"></i>
+                    </article>
+                </header>
             </header>
             <section class="dashboard">
-                <h1>Dashboard</h1>
-                <div class="stats-grid">
-                    <article class="stat">
-                        <h2>Revenue</h2>
-                        <p>$65</p>
+                <h1 class="title">Dashboard</h1>
+                <section class="stats-grid">
+                    <article tabindex="0" class="stat">
+                        <h3>Projects</h3>
+                        <p>38</p>
                     </article>
-                    <article class="stat">
-                        <h2>Orders</h2>
-                        <p>3000</p>
+                    <article tabindex="0" class="stat">
+                        <h3>Sales</h3>
+                        <p>302</p>
                     </article>
-                    <article class="stat">
-                        <h2>Sales</h2>
-                        <p>5500</p>
+                    <article tabindex="0" class="stat">
+                        <h3>Employees</h3>
+                        <p>5</p>
                     </article>
-                    <article class="stat">
-                        <h2>Employees</h2>
-                        <p>256</p>
-                    </article>
-                </div>
-                <section class="load-average">
-                    <h2>Load Average</h2>
-                    <div class="chart">
-                        <!-- Chart content goes here -->
-                    </div>
                 </section>
-                <section class="recent-messages">
-                    <h2>Recent Messages</h2>
-                    <ul>
-                        <li>
-                            <img src="hank.png" alt="Hank Schrader">
-                            <div>
-                                <h3>Hank Schrader</h3>
-                                <p>@johnducky</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="dean.png" alt="Dean Winchester">
-                            <div>
-                                <h3>Dean Winchester</h3>
-                                <p>@imdean</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="john.png" alt="John Doe">
-                            <div>
-                                <h3>John Doe</h3>
-                                <p>@Doejohn</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <button>Start Conversation</button>
+                <section class="load-average">
+                    <article class="chart">
+                        <!-- Chart content goes here -->
+                         <canvas id="currentChart"></canvas>
+                    </article>
                 </section>
             </section>
         </main>
