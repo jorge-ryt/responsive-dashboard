@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "postcss:watch": "postcss css/main.css -o dist/style.min.css --watch"
+  },
   "dependencies": {
-    "chart.js": "^4.4.8"
+    "chart.js": "^4.4.8",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0"
   }
 }
