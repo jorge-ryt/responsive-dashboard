@@ -36,11 +36,20 @@ body {
     margin: 1.5rem 0;
 }
 
+.sidebar nav ul li:hover {
+    cursor: pointer;
+}
+
 .sidebar nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
 
+}
+
+.sidebar nav ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .options-wrapper {
@@ -71,11 +80,29 @@ body {
 }
 
 .notifications, .user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-left: 1.25rem;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 50%;
+}
+
+.notifications:hover , .user-profile:hover {
+    cursor: pointer;
+    background-color: gray;
+    
 }
 
 .notification-icon {
     position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-icon:hover {
+    transform: rotate(30deg);
 }
 
 .badge {
